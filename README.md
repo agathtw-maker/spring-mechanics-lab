@@ -4,7 +4,7 @@ React + TypeScript + Vite + Three.js 的獨立高中力學教學作品。已在 
 
 ## GitHub Pages 發布
 
-預定正式網址：https://agathtw-maker.github.io/spring-mechanics-lab/ 。網址是否已啟用以儲存庫的 Actions / Pages 部署結果為準。
+正式網址：https://agathtw-maker.github.io/spring-mechanics-lab/ 。2026-10-16 已部署成功並實際開啟驗證；發布紀錄見 `DEPLOYMENT.md`。
 
 `.github/workflows/deploy.yml` 會在 main 更新時安裝 lockfile 中的依賴、檢查 TypeScript、執行 Vitest、正式建置，再發布 dist。僅通過檢查的版本會部署。儲存庫 Settings → Pages 的 Source 應設為 GitHub Actions。
 
