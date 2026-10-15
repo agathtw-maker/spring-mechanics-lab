@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-14",
+  "method": "RK4, adaptive substeps near zero length",
+  "dt": 0.0020833333333333333,
+  "results": [
+    {
+      "test": "正阻尼靜置平衡",
+      "duration": 100,
+      "expected": 0.49050000000000005,
+      "actual": 0.49050408780351873,
+      "tolerance": "相對誤差 ≤ 3%",
+      "pass": true
+    },
+    {
+      "test": "預設無阻尼週期",
+      "duration": 20,
+      "expected": 1.4049629462081452,
+      "actual": 1.4049629463298439,
+      "tolerance": "相對誤差 ≤ 3%",
+      "pass": true
+    },
+    {
+      "test": "質量加倍週期",
+      "duration": 20,
+      "expected": 1.9869176531592203,
+      "actual": 1.9869176530245265,
+      "tolerance": "相對誤差 ≤ 3%",
+      "pass": true
+    },
+    {
+      "test": "k 加倍週期",
+      "duration": 20,
+      "expected": 0.9934588265796102,
+      "actual": 0.9934588264308525,
+      "tolerance": "相對誤差 ≤ 3%",
+      "pass": true
+    },
+    {
+      "test": "正阻尼衰減，末 5 秒峰值",
+      "duration": 40,
+      "expected": "小於初始振幅 10%",
+      "actual": 0.02979877315497717,
+      "tolerance": "振幅比例 < 0.1",
+      "pass": true
+    },
+    {
+      "test": "無阻尼能量有界誤差（相對振動能量）",
+      "duration": 120,
+      "expected": 0,
+      "actual": 5.230815780521425e-10,
+      "tolerance": "最大相對誤差 ≤ 0.1%",
+      "pass": true
+    },
+    {
+      "test": "64 個參數邊界組合三維穩定性",
+      "duration": 12,
+      "expected": "有限數值；無持續增能",
+      "actual": 7.856826300667308e-12,
+      "tolerance": "每組 12 秒；最大能量增加 < 0.001 J",
+      "pass": true
+    },
+    {
+      "test": "8 個掛點角點 × 64 個參數角點，調整後釋放",
+      "duration": 12,
+      "expected": "有限數值；釋放後無持續增能",
+      "actual": 0.0000349460677426805,
+      "tolerance": "每組 12 秒；最大能量增加 < 0.001 J",
+      "pass": true
+    }
+  ]
+}
